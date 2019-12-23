@@ -7,5 +7,5 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn standard
-      - run: docker login --username $DOCKER_USERNAME --password-stdin $DOCKER_PASSWORD
+      - run: echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
       - run: ./scripts/build\&push.sh
