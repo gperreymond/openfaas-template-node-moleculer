@@ -6,5 +6,7 @@ yarn.lock
 yarn-error.log
 banner-moleculer.png
 
+.git
+.circleci
 node_modules
 scripts
