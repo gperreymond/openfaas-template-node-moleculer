@@ -1,0 +1,25 @@
+{
+  "name": "node-moleculer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "standard": "standard",
+    "standard:fix": "standard --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "contributors": [
+    "Gilles Perreymond <gperreymond@gmail.com>"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@hapi/boom": "8.0.1",
+    "@hapi/hapi": "18.4.0",
+    "@hapi/joi": "16.1.8",
+    "moleculer": "0.13.12",
+    "nconf": "0.10.0"
+  },
+  "devDependencies": {
+    "standard": "14.3.1"
+  }
+}

@@ -1,0 +1,9 @@
+.DS_Store
+.gitignore
+Dockerfile
+README.md
+yarn.lock
+yarn-error.log
+banner-moleculer.png
+
+node_modules
