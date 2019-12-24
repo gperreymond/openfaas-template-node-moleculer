@@ -16,12 +16,7 @@ const broker = new ServiceBroker({
 const start = async () => {
   // Load API Gateway
   broker.createService({
-    mixins: [ApiService],
-    settings: {
-      port: 3022,
-      ip: '0.0.0.0',
-      path: '/function'
-    }
+    mixins: [ApiService]
   })
   // Load all domains as services
   await broker.loadServices()

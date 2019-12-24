@@ -10,11 +10,11 @@ RUN apk --no-cache add curl ca-certificates && \
     adduser -S -g app app
 
 # prepare the destination
-RUN mkdir -p /usr/app
-WORKDIR /usr/app
+RUN mkdir -p /home/app
+WORKDIR /home/app
 
 # add source files
-COPY . /usr/app
+COPY . /home/app
 
 # root user used in docker:dind during CI, cf https://docs.npmjs.com/misc/config
 RUN npm config set unsafe-perm true
@@ -32,7 +32,12 @@ USER app
 
 ENV cgi_headers="true"
 ENV fprocess="node index.js"
-EXPOSE 3022
+ENV mode="http"
+ENV upstream_url="http://127.0.0.1:3000"
+
+ENV exec_timeout="5s"
+ENV write_timeout="5s"
+ENV read_timeout="5s"
 
 HEALTHCHECK --interval=3s CMD [ -e /tmp/.lock ] || exit 1
 
