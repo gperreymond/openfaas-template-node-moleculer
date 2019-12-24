@@ -32,7 +32,7 @@ USER app
 
 ENV cgi_headers="true"
 ENV fprocess="node index.js"
-EXPOSE 3000
+EXPOSE 3022
 
 HEALTHCHECK --interval=3s CMD [ -e /tmp/.lock ] || exit 1
 
