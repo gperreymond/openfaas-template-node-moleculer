@@ -1,7 +1,5 @@
-const Hapi = require('@hapi/hapi')
 const { ServiceBroker } = require('moleculer')
-
-const gateway = new Hapi.Server()
+const ApiService = require('moleculer-web')
 
 const broker = new ServiceBroker({
   metrics: false,
@@ -9,7 +7,6 @@ const broker = new ServiceBroker({
   validation: true,
   async started () {
     broker.logger.warn('Broker started')
-    await gateway.start()
   },
   stopped: async () => {
     broker.logger.warn('Broker stopped')
@@ -17,6 +14,9 @@ const broker = new ServiceBroker({
 })
 
 const start = async () => {
+  // Load API Gateway
+  broker.createService(ApiService)
+  // Load all domains as services
   await broker.loadServices()
   await broker.start()
 }

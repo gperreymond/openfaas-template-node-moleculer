@@ -6,19 +6,17 @@
   "scripts": {
     "standard": "standard",
     "standard:fix": "standard --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "contributors": [
     "Gilles Perreymond <gperreymond@gmail.com>"
   ],
   "license": "UNLICENSED",
   "dependencies": {
-    "@hapi/boom": "8.0.1",
-    "@hapi/hapi": "18.4.0",
     "@hapi/inert": "5.2.2",
-    "@hapi/joi": "16.1.8",
     "@hapi/vision": "5.5.4",
     "moleculer": "0.13.12",
+    "moleculer-web": "0.8.5",
     "nconf": "0.10.0"
   },
   "devDependencies": {
