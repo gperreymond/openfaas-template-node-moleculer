@@ -8,5 +8,5 @@
 
 ## Features
 
-* moleculer: 0.13.12
+* moleculer: 0.14.0-beta6
 * moleculer-web: 0.8.5
