@@ -5,7 +5,20 @@ const { APP_RABBITMQ_URI, APP_RABBITMQ_PREFETCH } = process.env
 
 const configuration = {
   moleculer: {
-    metrics: false,
+    metrics: {
+      enabled: true,
+      reporter: [{
+        type: 'Prometheus',
+        options: {
+          port: 3030,
+          path: '/metrics',
+          defaultLabels: registry => ({
+            namespace: registry.broker.namespace,
+            nodeID: registry.broker.nodeID
+          })
+        }
+      }]
+    },
     logger: true,
     validation: true,
     transporter: {
