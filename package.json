@@ -1,6 +1,6 @@
 {
   "name": "node-moleculer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,12 +13,9 @@
   ],
   "license": "UNLICENSED",
   "dependencies": {
-    "@hapi/inert": "5.2.2",
-    "@hapi/vision": "5.5.4",
     "amqplib": "0.5.5",
-    "moleculer": "0.13.12",
-    "moleculer-web": "0.8.5",
-    "nconf": "0.10.0"
+    "moleculer": "0.14.0-beta6",
+    "moleculer-web": "0.8.5"
   },
   "devDependencies": {
     "standard": "14.3.1"
