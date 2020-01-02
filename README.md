@@ -10,3 +10,8 @@
 
 * moleculer: 0.14.0-beta6
 * moleculer-web: 0.8.5
+
+## Environment vars
+
+* APP_RABBITMQ_URI
+* APP_RABBITMQ_PREFETCH
