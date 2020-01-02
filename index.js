@@ -48,9 +48,16 @@ const start = async () => {
   await broker.loadServices()
   // Get all aliases for metadata
   const services = broker.services
-  let aliases = {}
+  let aliases = {
+    async 'GET /hc' (req, res) {
+      const data = await req.$ctx.broker.call('$node.health')
+      res.setHeader('Content-Type', 'application/json; charset=utf-8')
+      res.writeHead(200)
+      res.end(JSON.stringify(data))
+    }
+  }
   services.map(service => {
-    aliases = { ...service.metadata.aliases }
+    aliases = { ...aliases, ...service.metadata.aliases }
   })
   // Load API Gateway
   broker.createService({
