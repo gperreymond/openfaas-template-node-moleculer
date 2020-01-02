@@ -15,3 +15,7 @@
 
 * APP_RABBITMQ_URI
 * APP_RABBITMQ_PREFETCH
+
+## Architecture
+
+![Global schema](./global-schema.png)
