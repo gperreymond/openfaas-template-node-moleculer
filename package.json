@@ -13,7 +13,7 @@
   "main": "index.js",
   "scripts": {
     "standard": "standard",
-    "test": "NODE_ENV=test APP_MOLECULER_LOGGER=true APP_MOLECULER_METRICS=false jest --coverage --verbose --detectOpenHandles --forceExit",
+    "test": "NODE_ENV=test APP_MOLECULER_LOGGER=false APP_MOLECULER_METRICS=false jest --coverage --verbose --detectOpenHandles --forceExit",
     "coveralls": "cat coverage/lcov.info | coveralls"
   },
   "license": "UNLICENSED",

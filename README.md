@@ -4,7 +4,7 @@
 
 [OpenFaaS®](https://www.openfaas.com/) makes it simple to deploy both functions and existing code to Kubernetes.
 
-[![CircleCI](https://circleci.com/gh/gperreymond/openfaas-template-node-moleculer.svg?style=shield)](https://circleci.com/gh/gperreymond/openfaas-template-node-moleculer) [![Docker](https://img.shields.io/badge/docker-ready-blue)](https://hub.docker.com/repository/docker/gperreymond/openfaas-node-moleculer)
+[![CircleCI](https://circleci.com/gh/gperreymond/openfaas-template-node-moleculer.svg?style=shield)](https://circleci.com/gh/gperreymond/openfaas-template-node-moleculer) [![Coverage Status](https://coveralls.io/repos/github/gperreymond/openfaas-template-node-moleculer/badge.svg?branch=master)](https://coveralls.io/github/gperreymond/openfaas-template-node-moleculer?branch=master) [![Docker](https://img.shields.io/badge/docker-ready-blue)](https://hub.docker.com/repository/docker/gperreymond/openfaas-node-moleculer)
 
 ## Features
 
