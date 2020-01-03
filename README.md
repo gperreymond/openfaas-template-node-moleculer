@@ -59,8 +59,7 @@ broker.createService({
 * Create the dockerfile
 * Create the openfaas deployment
 
-### Create a dummy service with two actions
-
+### Create a dummy service with two actions  
 
 ```js
 /**
@@ -75,7 +74,7 @@ module.exports = {
 }
 ```
 
-### Open two routes from moleculer gateway, who match the two actions
+### Open two routes from moleculer gateway, who match the two actions  
 
 Property __metadata.aliases__ is from __moleculer-web__, it will expose the actions you want.
 
@@ -101,7 +100,7 @@ module.exports = {
 }
 ```
 
-### Create the dockerfile
+### Create the dockerfile  
 
 A very simple thing to do, because moleculer is configure to load all services in __services__ directory, just do this:
 
@@ -111,7 +110,7 @@ FROM gperreymond/openfaas-node-moleculer
 COPY . services
 ```
 
-### Create the openfaas deployment
+### Create the openfaas deployment  
 
 ```yaml
 version: 1.0
