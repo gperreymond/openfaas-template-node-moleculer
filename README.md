@@ -88,14 +88,14 @@ module.exports = {
   metadata: {
     aliases: {
       'POST dummy/hello-world': [
-        'Dummy.HelloWorld'
+        'Dummy.HelloWorldCommand'
       ],
-      'GET dummy/not-hello-world': 'Dummy.NotHelloWorld'
+      'GET dummy/not-hello-world': 'Dummy.NotHelloWorldQuery'
     }
   },
   actions: {
-    HelloWorld: require('./actions/HelloWorldQuery'),
-    NotHelloWorld: require('./actions/NotHelloWorld')
+    HelloWorldCommand: require('./actions/HelloWorldCommand'),
+    NotHelloWorldQuery: require('./actions/NotHelloWorldQuery')
   }
 }
 ```
