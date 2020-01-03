@@ -68,8 +68,8 @@ filename: dummy.service.js
 module.exports = {
   name: 'Dummy',
   actions: {
-    HelloWorld: require('./actions/HelloWorldQuery'),
-    NotHelloWorld: require('./actions/NotHelloWorld')
+    HelloWorldCommand: require('./actions/HelloWorldCommand'),
+    NotHelloWorldQuery: require('./actions/NotHelloWorldQuery')
   }
 }
 ```
