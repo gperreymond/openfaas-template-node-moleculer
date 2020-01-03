@@ -14,7 +14,7 @@ afterAll(async () => {
 
 describe('[Unit] Moleculer', () => {
   test('should successfully get the /hc', async () => {
-    const { data } = await axios.get('http:localhost:3000/hc').catch(err => {
+    const { data } = await axios.get('http://localhost:3000/hc').catch(err => {
       expect(err).toEqual(null)
     })
     const { client: { type } } = data
