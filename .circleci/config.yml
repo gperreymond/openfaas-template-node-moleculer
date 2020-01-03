@@ -8,5 +8,7 @@ jobs:
       - setup_remote_docker
       - run: yarn
       - run: yarn standard
+      - run: yarn test
+      - run: yarn coveralls
       - run: echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
       - run: ./scripts/build\&push.sh

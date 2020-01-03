@@ -13,8 +13,10 @@
 
 ## Environment vars
 
-* APP_RABBITMQ_URI
-* APP_RABBITMQ_PREFETCH
+* APP_RABBITMQ_URI: amqp://username:password@localhost:5672 (default)
+* APP_RABBITMQ_PREFETCH: 1 (default)
+* APP_MOLECULER_LOGGER: true (default)
+* APP_MOLECULER_METRICS: true (default)
 
 I choose rabbitmq as broker, over nats ; Because of prefetch, the webui admin, the replay, the deadletter, etc.  
 Usually I take nats but not this time!
@@ -125,9 +127,11 @@ functions:
     lang: dockerfile
     image: [docker hub image name]
     handler: [path of you service in the repository]
+    # some env to overwrite
     environment:
-      APP_RABBITMQ_URI: amqp://username:password@localhost:5672
-      APP_RABBITMQ_PREFETCH: 1
+      APP_RABBITMQ_URI: amqp://admin:password@rabbitmq.docker.localhost:5672
+      APP_RABBITMQ_PREFETCH: 2
+    # mandatory for blue/green
     annotations:
       com.openfaas.health.http.path: "/hc"
       com.openfaas.health.http.initialDelay: "30s"

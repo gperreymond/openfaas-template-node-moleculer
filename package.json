@@ -1,23 +1,46 @@
 {
-  "name": "node-moleculer",
-  "version": "1.0.1",
+  "name": "openfaas-node-moleculer",
+  "version": "1.1.0",
+  "repository": "https://github.com/gperreymond/openfaas-template-node-moleculer",
+  "bugs": {
+    "url": "https://github.com/gperreymond/openfaas-template-node-moleculer/issues"
+  },
+  "homepage": "https://github.com/gperreymond/openfaas-template-node-moleculer",
+  "contributors": [
+    "Gilles Perreymond <gperreymond@gmail.com>"
+  ],
   "description": "",
   "main": "index.js",
   "scripts": {
     "standard": "standard",
-    "standard:fix": "standard --fix",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "NODE_ENV=test APP_MOLECULER_LOGGER=true APP_MOLECULER_METRICS=false jest --coverage --verbose --detectOpenHandles --forceExit",
+    "coveralls": "cat coverage/lcov.info | coveralls"
   },
-  "contributors": [
-    "Gilles Perreymond <gperreymond@gmail.com>"
-  ],
   "license": "UNLICENSED",
   "dependencies": {
     "amqplib": "0.5.5",
     "moleculer": "0.14.0-beta6",
-    "moleculer-web": "0.8.5"
+    "moleculer-web": "0.8.5",
+    "nconf": "0.10.0"
   },
   "devDependencies": {
+    "axios": "0.19.0",
+    "coveralls": "3.0.9",
+    "jest": "24.9.0",
     "standard": "14.3.1"
+  },
+  "standard": {
+    "ignore": [],
+    "globals": [
+      "describe",
+      "test",
+      "fit",
+      "expect",
+      "beforeAll",
+      "afterAll",
+      "beforeEach",
+      "afterEach",
+      "jest"
+    ]
   }
 }

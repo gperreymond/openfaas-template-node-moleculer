@@ -8,5 +8,6 @@ banner-moleculer.png
 
 .git
 .circleci
+coverage
 node_modules
 scripts
