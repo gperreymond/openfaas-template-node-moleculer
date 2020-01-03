@@ -76,6 +76,7 @@ module.exports = {
 ```
 
 ### Open two routes from moleculer gateway, who match the two actions
+
 Property __metadata.aliases__ is from __moleculer-web__, it will expose the actions you want.
 
 
@@ -101,6 +102,7 @@ module.exports = {
 ```
 
 ### Create the dockerfile
+
 A very simple thing to do, because moleculer is configure to load all services in __services__ directory, just do this:
 
 ```sh
