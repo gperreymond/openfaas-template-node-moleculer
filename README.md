@@ -113,6 +113,7 @@ COPY . services
 ### Create the openfaas deployment  
 
 ```yaml
+# stack.yaml
 version: 1.0
 
 provider:
@@ -130,4 +131,18 @@ functions:
     annotations:
       com.openfaas.health.http.path: "/hc"
       com.openfaas.health.http.initialDelay: "30s"
+```
+
+## Final directory architecture
+
+```sh
+[dummy]
+   [actions]
+      HelloWorldCommand.js
+      NotHelloWorldQuery.js
+   .dockerignore
+   Dockerfile
+   dummy.service.js
+
+stack.yaml
 ```
