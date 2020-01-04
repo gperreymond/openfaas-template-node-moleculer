@@ -1,6 +1,6 @@
 {
   "name": "openfaas-node-moleculer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "repository": "https://github.com/gperreymond/openfaas-template-node-moleculer",
   "bugs": {
     "url": "https://github.com/gperreymond/openfaas-template-node-moleculer/issues"

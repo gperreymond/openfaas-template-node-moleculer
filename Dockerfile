@@ -30,6 +30,7 @@ RUN chown app:app -R /home/app && \
 
 USER app
 
+ENV content_type="application/json"
 ENV cgi_headers="true"
 ENV fprocess="node index.js"
 ENV mode="http"
